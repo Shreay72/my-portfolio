@@ -28,7 +28,7 @@ const HeroSection = () => {
         <div className="animated-blob w-[400px] h-[400px] bg-accent/15 bottom-10 -right-48" style={{ animationDelay: '5s' }} />
         <div className="animated-blob w-[300px] h-[300px] bg-primary/10 top-1/2 left-1/2 -translate-x-1/2" style={{ animationDelay: '10s' }} />
       </motion.div>
-      
+
       {/* Gradient Overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-background via-background/90 to-background pointer-events-none z-10" />
 
@@ -85,7 +85,7 @@ const HeroSection = () => {
             transition={{ duration: 0.6, delay: 0.6 }}
             className="text-lg sm:text-xl text-muted-foreground max-w-2xl mb-12 leading-relaxed"
           >
-            I build ML-driven solutions, analytics dashboards, and data pipelines 
+            I build ML-driven solutions, analytics dashboards, and data pipelines
             that turn raw data into real business insights.
           </motion.p>
 
@@ -97,9 +97,11 @@ const HeroSection = () => {
             className="flex flex-wrap justify-center gap-4 mb-20"
           >
             <MagneticButton>
-              <Button variant="hero" size="lg" className="glow-effect group">
-                <Download className="mr-2 h-5 w-5 group-hover:animate-bounce" />
-                Download Resume
+              <Button variant="hero" size="lg" className="glow-effect group" asChild>
+                <a href="/my-portfolio/cv_resume.pdf" download="Shreay_Patil_Resume.pdf">
+                  <Download className="mr-2 h-5 w-5 group-hover:animate-bounce" />
+                  Download Resume
+                </a>
               </Button>
             </MagneticButton>
             <MagneticButton>
@@ -155,10 +157,10 @@ const HeroSection = () => {
         >
           <span className="text-xs text-muted-foreground tracking-widest uppercase">Scroll</span>
           <div className="w-6 h-10 rounded-full border-2 border-muted-foreground/30 flex items-start justify-center p-2">
-            <motion.div 
+            <motion.div
               animate={{ y: [0, 12, 0], opacity: [1, 0.3, 1] }}
               transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-              className="w-1.5 h-1.5 rounded-full bg-primary" 
+              className="w-1.5 h-1.5 rounded-full bg-primary"
             />
           </div>
         </motion.div>
